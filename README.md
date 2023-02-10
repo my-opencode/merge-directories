@@ -26,3 +26,7 @@ merge-directories.exe --directory /abs/path --destination merged --template my-b
 - directory: String: absolute path to the folder where directories to merge are located.
 - template: String: beginning of the beginning of the name of the directories to merge.
 - destination: String: destination folder name
+
+#### Process
+
+- Lists all source directories (`sources`) of /abs/path starting with template "my-backup-"
