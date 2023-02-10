@@ -2,8 +2,7 @@ import { getHelp } from "./0_help";
 import { readArgs } from "./1_read_args";
 import { existsDirectory } from "./2_existsDirectory";
 import { listSourceDirectories } from "./3_listSourceDirectories";
-import { createDestinationIfNeeded } from "./4_createDestinationIfNeeded";
-import { mergeAllDirectories } from "./5_merge_all";
+import { listDirectoryAndFilesOfAllSources } from "./5_list_all";
 import { readlineInterface } from "./readlineInterface";
 
 (async function () {
@@ -13,7 +12,7 @@ import { readlineInterface } from "./readlineInterface";
     await existsDirectory(directory);
     const orderedSourceDirectories = await listSourceDirectories(directory, template);
     const absoluteDestination = await createDestinationIfNeeded(directory, destination);
-    await mergeAllDirectories(orderedSourceDirectories, absoluteDestination);
+    const {directories, files} = await listDirectoryAndFilesOfAllSources(orderedSourceDirectories);
   } catch (err) {
     if (err !== `exit`)
     console.log(err instanceof Error ? `${err.message}\n${err.stack} ` : `Unexpected error: ${String(err)}`);
