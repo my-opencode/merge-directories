@@ -34,3 +34,4 @@ export async function createAllDestinationDirectories(root:string, directories:S
     console.log(`[${f(++count)}/${total}] Creating directory: "${rel}".`);
     await createDirectory(path.resolve(root, rel));
   }
+}
