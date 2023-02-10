@@ -9,7 +9,7 @@
     "build": "tsc",
     "run:dist": "node ./dist/main.js",
     "pkg": "npm run build && cross-env-shell pkg ./dist/main.js -t node14 -o ./releases/$npm_package_name.$npm_package_version.exe",
-    "pkg:linux": "npm run build && cross-env-shell pkg ./dist/main.js -t node14-linux-x64 -o ./releases/$npm_package_name.$npm_package_version",
+    "pkg:linux": "npm run build && cross-env-shell pkg ./dist/main.js -t node14-linux-x64 -o ./releases/$npm_package_name.$npm_package_version.linux",
     "start": "cross-env-shell ./releases/merge-directories.$npm_package_version.exe  --directory \\\\\\192.168.10.249\\homes\\huimin.lu\\Emails --template 8mzaw94z.default-release- --destination dest"
   },
   "keywords": [
