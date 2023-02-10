@@ -32,5 +32,14 @@ merge-directories.exe --directory /abs/path --destination merged --template my-b
 - Creates /abs/path/merged if missing
 - Lists all source directories (`sources`) of /abs/path starting with template "my-backup-"
 - Iterates `sources`
-    - Adds directories and sub directories of source inside destination
-    - Overwrites files of destination with those of source
+    - Lists all unique directory relative paths
+    - Lists all file relative paths and latest source path
+- Iterates directory list and mkdir
+- Iterates file list and copies from source to dest
+
+## Versions
+
+- 1.0.1 "Brute Force"
+  Copies every file from every previous folder into the destination
+- 2.0.0 "Work Smart"
+  Lists all directories and files. Creates and copies once per file.
