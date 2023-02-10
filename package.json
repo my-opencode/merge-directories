@@ -1,0 +1,39 @@
+{
+  "name": "merge-directories",
+  "version": "1.0.0",
+  "description": "Merges multiple directories in order.",
+  "main": "dist/main.js",
+  "scripts": {
+    "help:dev":"ts-node ./src/main.ts --help",
+    "run:dev":"ts-node ./src/main.ts --directory \\\\192.168.10.249\\homes\\huimin.lu\\Emails --template 8mzaw94z.default-release- --destination dest",
+    "build": "tsc",
+    "run:dist": "node ./dist/main.js",
+    "pkg": "npm run build && cross-env-shell pkg ./dist/main.js -t node14 -o ./releases/$npm_package_name.$npm_package_version.exe",
+    "pkg:linux": "npm run build && cross-env-shell pkg ./dist/main.js -t node14-linux-x64 -o ./releases/$npm_package_name.$npm_package_version",
+    "start": "cross-env-shell ./releases/merge-directories.$npm_package_version.exe  --directory \\\\\\192.168.10.249\\homes\\huimin.lu\\Emails --template 8mzaw94z.default-release- --destination dest"
+  },
+  "keywords": [
+    "directories",
+    "merge"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/my-opencode/merge-directories.git"
+  },
+  "bugs": {
+    "url": "https://github.com/my-opencode/merge-directories/issues"
+  },
+  "homepage": "https://github.com/my-opencode/merge-directories#readme",
+  "author": "my-opencode",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/core-js": "^2.5.5",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.33.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
