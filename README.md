@@ -8,3 +8,13 @@ Merge partial automatic backups into the current state.
 
 Only adds or replace files. 
 Does not remove files from the destination (merge) directory.
+
+## Usage
+
+### Help
+
+merge-directories.exe --help
+
+Prints this Usage section.
+
+
