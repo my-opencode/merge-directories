@@ -29,4 +29,5 @@ merge-directories.exe --directory /abs/path --destination merged --template my-b
 
 #### Process
 
+- Creates /abs/path/merged if missing
 - Lists all source directories (`sources`) of /abs/path starting with template "my-backup-"
