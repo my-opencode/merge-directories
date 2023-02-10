@@ -35,3 +35,4 @@ merge-directories.exe --directory /abs/path --destination merged --template my-b
     - Lists all unique directory relative paths
     - Lists all file relative paths and latest source path
 - Iterates directory list and mkdir
+- Iterates file list and copies from source to dest
